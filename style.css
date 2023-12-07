@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Saira:wght@700&display=swap');
+
+:root {
+    /*الوان الموقع*/
+--primary-color: #033b4a;
+--Secondery-color: #20C997;
+--gray: #4a4a4d;
+--bg-primary: #ecf0f3;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+h1,
+h2 {
+    font-family: 'Saira', sans-serif;
+}
+ul{
+   list-style: none; 
+}
+
+a {
+    text-decoration: none;
+}
+/*utilty classes*/
+.container{
+    max: width 1100px; 
+    margin: auto;
+    padding: 0 2rem;
+}
+.text-primary{      /*بمعني اي نص بهذا الاسم ياخذ اللون*/
+    color: var(--Secondery-color);
+}
+
+    .btn-primary{
+background-color: var(--Secondery-color);
+color: #fff;
+padding: 8px 20px;
+font-size: 14px;
+border-radius: 5px;
+border: none;
+cursor: pointer;
+transition: all 0.3s ease;
+    }
+    .btn-primary:hover{
+background-color: #15a076;   
+ }
+
+/*Header start style*/
+header {
+    background-color: var(--bg-primary);
+    /*لطول الصفحه*/ height: 100vh;
+}
+/* Header end*/
+
+header .navbar {
+background-color:#fff;
+border-bottom: 1px solid #ccc;
+position: fixed;
+width: 100%;
+z-index: 1;
+}
+/*هنا نستبدل مكان الليست لليمين*/
+header .navbar nav {
+display: flex;
+justify-content:space-between;
+align-items: center;
+max-width: 1100px; /*علشان يبقى المقاس مضبوط وبالمنتصف*/
+margin:auto;
+padding: 1.5rem 2rem; /*space*/
+}
+
+#Home #Logo{
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 600;
+}
+header .navbar nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+header .navbar nav ul a {
+    margin: 0 15px; /*space between items*/
+    color:var(--primary-color);
+    font-weight: 600;
+}
+header .header-content{
+
+   display: grid; 
+   grid-template-columns: 1.5fr 1fr;
+   align-items: center;
+    min-width: 1100px;
+    margin: auto;
+    padding: 5rem 2rem;   /* space*/
+    height: 100%; 
+}
+header .header-content .content-text{
+    margin: bottom 5rem;
+
+}
+
+
+#Home .header-content p span{
+    font-weight: 700;
+    font-size: 20px;
+    text-shadow: 3PX 3PX 3PX rgba(0, 0, 0, 0.2);
+
+}
+#Home .header-content h1{
+    font-size: 60px;
+    color: var(--primary-color);
+    text-shadow: 3PX 3PX 3PX rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+#Home .header-content .title{
+  font-size: 20px;  
+  color: var(--primary-color);
+  margin:10px 0;
+  font-weight: 500;
+}
+#Home .header-content .social{
+    margin: 1rem 0 2rem;
+}
+#Home .header-content .social a i{   /*icon*/
+    font: size 18px; 
+    padding: 10px;
+    background: var(--gray);
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.4s ease;
+}
+#Home .header-content .social a i:hover{
+    transform:scale(0.85);
+}
+/*heder end*/
+/*about start*/
+#About{
+    padding: 6rem 0;   
+}
+#About h2 {
+text-align: center;
+font-size: 38px;
+color: var(--primary-color);
+font-weight: 600;
+}
+#About hr{
+    width:100px ;
+    height: 3px;
+    background-color: #20C997;
+    border: none;
+    margin: 5px auto 0;  
+}
+#About .about-content{
+margin-top:  4rem; 
+display: grid;
+grid-template-columns: 2fr 1fr;
+column-gap: 3rem;
+}
+#About .about-content .col-1 h3{
+   font-size: 28px; 
+   color: var(--primary-color);
+   margin-bottom: 20px;
+}
+
+#About .about-content .col-1 p{
+    color: #4a4a4d;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+#About .about-content .col-2 p{
+    /* نحط مسافة بين البراقراف والبوردر*/
+    color: #4a4a4d;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+/*about end*/
+
+/*SKILLS START*/
+#skills{
+    padding: 6rem 0; 
+     background-color:var(--primary-color);
+}
+#skills h2 {
+    text-align: center;
+    font: size 38px;
+    color:rgb(228, 219, 219);
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    }
+    #skills hr{
+        width: 100px;px ;
+        height: 3px;
+        background-color: #20C997;
+        border: none;
+        margin: 5px auto 0;  
+    }
+    #skills .Skills-content{
+        margin-top: 2rem;
+        background-color: #0b3d4a;
+    }
+    #skills .Skills-content .row{
+        display: grid;
+        grid-template-columns:repeat(5, 1fr) ;
+        font-size: 25px;
+        align-items: center;
+        text-align: center;
+    }
+    #skills .Skills-content .row .itme{
+        color: #fff;
+        background-color: #a09b9b;
+        margin: 20px ;
+        padding: 1rem;
+        border-radius: 10px;
+        font-size: 17px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    #skills .Skills-content .row .itme:nth-child(4) img{
+        max-width: 100px;
+    }
+    #skills .Skills-content .row .itme:hover{
+        box-shadow: 10px 10px 10px #00f4ab0c;
+    }
+#skills .row img{
+    max-width: 40px;
+}
+/*SKILLS END*/
+/*Services START*/
+#Services{
+    padding: 6rem 0; 
+     background-color:#00f4ab0c;
+}
+#Services h2 {
+    text-align: center;
+    font-size: 38px;
+    color: var(--primary-color);
+    font-weight: 600;
+    }
+    #Services hr{
+        width:100px ;
+        height: 3px;
+        background-color: #20C997;
+        border: none;
+        margin: 5px auto 0;  
+    }
+    #Services .Heading{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #Services .Heading img{
+        width: 55px;
+        margin-right: 10px;
+    }
+    #Services .row{
+        display: grid;
+     grid-template-columns: repeat(2, 1fr);
+        margin-top: 4rem;
+        text-align: center;
+        column-gap: 2rem ;
+        row-gap: 2rem;
+    }
+    #Services .row .itme{
+       background-color: #fff; 
+       padding: 30px 10px;
+       box-shadow:2px 2px 5px rgba(0, 0, 0, 0.2) ;
+       border-radius: 10px;
+       transition: all 0.3s ease;
+    }
+    #Services .row .itme h3{
+        margin: 7px 0;
+        color: var(--primary-color);
+    }
+    #Services .row .itme:hover{
+   transform:scale(1.02);   
+ }
+ /*-------Portfolio Start--------*/
+ #Portfolio{
+    padding: 6rem 0;
+    background-color: var(--primary-color);   
+}
+#Portfolio h2 {
+    text-align: center;
+    font-size: 38px;
+    color: var(--primary-color);
+    font-weight: 600;
+    }
+    #Portfolio hr{
+        width:100px ;
+        height: 3px;
+        background-color: #20C997;
+        border: none;
+        margin: 5px auto 0;  
+    }
+    #Portfolio h2 {
+        text-align: center;
+        font: size 38px;
+        color:rgb(255, 255, 255);
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        }
+    #Portfolio .row{
+            display: grid;
+            grid-template-columns: repeat(4 , 1fr);
+            justify-content: center;
+            align-items: center;
+            gap: 2rem ;
+            margin-top: 4rem;
+        }
+        #Portfolio .row .itme{
+            background-color: #fff;
+            border-radius: 5px; 
+            transition: all 0.3s ease; 
+        }
+    #Portfolio .row .itme:hover{
+        transform:scale(1.03);
+        }
+    #Portfolio .row .itme img{
+        max-width: 100%;
+        border-top-left-radius: 5PX;
+        border-top-right-radius: 5px;
+        border-bottom: 1px solid #ccc;
+        }
+    #Portfolio .row .itme .itme-content{
+        padding: 20px 15px 30px;
+        }
+    #Portfolio .row .itme .itme-content h3{
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-bottom: 10px;  
+    }
+
+         /*-------Portfolio END-------*/
+
+         /*-------contact star-----*/
+     #Contact h2 {
+            text-align: center;
+            font-size: 38px;
+            color: var(--primary-color);
+            font-weight: 600;
+            }
+     #Contact{
+             padding: 6rem 0; 
+             background-color:#00f4ab0c;
+            }
+     #Contact{
+            padding: 4rem 0;
+     }
+     #Contact .row{
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns:repeat(2,1fr) ;
+        background-color: #fff;
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2) ;
+        padding: 2rem 3rem;
+        border-radius: 10px;
+        column-gap: 2rem;
+     }
+     #Contact .row input, #Contact .row textarea {
+       display: block; 
+       width: 100%;
+       margin: 20px 0;
+       padding: 10px;
+       outline: none;
+       background-color: #00f4ab0c;
+       border: 1px solid #bbb;
+     }
+/* footer start*/
+#footer{
+    background-color: #222;
+    color: #fff;
+    padding:1rem 0 ;
+    text-align: center;
+}
