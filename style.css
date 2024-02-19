@@ -31,7 +31,7 @@ a {
 }
 /*utilty classes*/
 .container{
-    max: width 1100px; 
+    max-width: 1100px; 
     margin: auto;
     padding: 0 2rem;
 }
@@ -54,13 +54,13 @@ background-color: #15a076;
  }
 
 /*Header start style*/
-header {
+#Home {
     background-color: var(--bg-primary);
     /*لطول الصفحه*/ height: 100vh;
 }
 /* Header end*/
 
-header .navbar {
+#Home .navbar {
 background-color:#fff;
 border-bottom: 1px solid #ccc;
 position: fixed;
@@ -68,7 +68,7 @@ width: 100%;
 z-index: 1;
 }
 /*هنا نستبدل مكان الليست لليمين*/
-header .navbar nav {
+#Home .navbar nav {
 display: flex;
 justify-content:space-between;
 align-items: center;
@@ -82,18 +82,18 @@ padding: 1.5rem 2rem; /*space*/
     font-size: 24px;
     font-weight: 600;
 }
-header .navbar nav ul{
+#Home .navbar nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
-header .navbar nav ul a {
+#Home .navbar nav ul a {
     margin: 0 15px; /*space between items*/
     color:var(--primary-color);
     font-weight: 600;
 }
-header .header-content{
+#Home .header-content{
 
    display: grid; 
    grid-template-columns: 1.5fr 1fr;
@@ -103,7 +103,7 @@ header .header-content{
     padding: 5rem 2rem;   /* space*/
     height: 100%; 
 }
-header .header-content .content-text{
+#Home .header-content .content-text{
     margin: bottom 5rem;
 
 }
@@ -200,7 +200,7 @@ column-gap: 3rem;
     font-family: 'Poppins', sans-serif;
     }
     #skills hr{
-        width: 100px;px ;
+        width: 100px;
         height: 3px;
         background-color: #20C997;
         border: none;
@@ -384,3 +384,67 @@ column-gap: 3rem;
     padding:1rem 0 ;
     text-align: center;
 }
+ 
+@media(max-width: 768px){
+#Home .navbar nav {
+        display: block;
+       text-align: center;
+    }
+#Home .navbar nav ul{
+margin-top: 50px;
+}
+#Home .navbar nav ul a {
+    margin: 0 8px;
+}
+#Home .header-content {
+grid-template-columns: 1fr;
+}
+#Home .header-content .content-text{
+    margin: bottom 0rem;
+    margin-top: 5rem;
+}
+#Home .header-content h1{
+font-size: 50px;
+}
+#About .about-content,
+Contact .row{
+grid-template-columns: 1fr;
+row-gap: 3rem;
+}
+#skills .Skills-content .row,
+#Services .row,
+#Portfolio .row{
+grid-template-columns: repeat(2, 1fr);
+}
+}
+
+/* mobile*/
+@media (max-width:528px) {
+    #Home .header-content h1{
+        font-size: 35px;
+    }
+#Home .header-content p span,
+#Home .header-content .title{
+    font-size: 16px;  
+}
+#About h2,
+#skills h2,
+#Services h2,
+#Portfolio h2,
+#Contact h2{
+    font-size: 30px;
+}
+#About .about-content .col-1 h3{
+    font-size: 20px; 
+}
+#Services .row,
+#Portfolio .row,
+#skills .Skills-content .row{
+    grid-template-columns: repeat(2, 1fr);
+}
+#Contact .row{
+    padding: 2rem 1rem;
+}
+}
+
+
