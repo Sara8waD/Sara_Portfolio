@@ -177,13 +177,6 @@ column-gap: 3rem;
     margin-bottom: 20px;
     line-height: 1.8;
 }
-#About .about-content .col-2 p{
-    /* نحط مسافة بين البراقراف والبوردر*/
-    color: #4a4a4d;
-    margin-bottom: 20px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #ddd;
-}
 
 /*about end*/
 
